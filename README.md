@@ -32,7 +32,7 @@ Essa aplicação foi desenvolvida no sistema operacional Ubuntu 20.04.3 LTS com 
 Primeiro realize a preparação do ambiente:
 
 ```bash
-# 1. Crie um ambiente virtual  
+# 1. Crie um ambiente virtual
 conda create -n my_env python=3.7
 
 # 2. Ative o ambiente de desenvolvimento

@@ -1,16 +1,16 @@
-from fastapi import FastAPI
-from fastapi.params import Query
 import pickle
+
+import numpy as np
+from fastapi import FastAPI
 from pydantic import BaseModel
 from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-import numpy as np
 
 description = """
 Teste Prático Ciências de Dados. 🚀
 ## Sentiment Analysis
 
-Neste endpoint é realizada a classificação de um texto de tweet sobre Covid-19. 
+Neste endpoint é realizada a classificação de um texto de tweet sobre Covid-19.
 A classificação é realizada em 5 categorias de sentimentos:
 
 * **Extremely Positive** (_Extremamente Positivo_).
@@ -42,12 +42,19 @@ class Tweet(BaseModel):
     text: str
 
 
-with open('tokenizer.pkl', 'rb') as f:
+with open("tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
 
-model = keras.models.load_model('tweets.keras')
+model = keras.models.load_model("tweets.keras")
 
-sentiment_list = ['Extremely Negative', 'Extremely Positive', 'Negative', 'Neutral', 'Positive']
+sentiment_list = [
+    "Extremely Negative",
+    "Extremely Positive",
+    "Negative",
+    "Neutral",
+    "Positive",
+]
+
 
 @app.post("/tweet_sentiment")
 def predict_sentiment(tweet: Tweet):
