@@ -14,6 +14,7 @@ matplotlib = "^3.8.3"
 wordcloud = "^1.9.3"
 ipykernel = "^6.29.3"
 kaggle = "^1.6.6"
+spacy = "^3.7.4"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.2"
