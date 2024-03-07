@@ -15,6 +15,10 @@ wordcloud = "^1.9.3"
 ipykernel = "^6.29.3"
 kaggle = "^1.6.6"
 spacy = "^3.7.4"
+ipywidgets = "^8.1.2"
+scikit-learn = "^1.4.1.post1"
+plotly = "^5.19.0"
+nbformat = "^5.9.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.2"
