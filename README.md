@@ -32,15 +32,84 @@
 
 ## 📚 Sobre o Projeto
 
-Este projeto tem como objetivo realizar a análise de sentimentos em tweets coletados durante a pandemia de COVID-19. Para isso, utilizamos técnicas de Processamento de Linguagem Natural (NLP) e Machine Learning para classificar os tweets em positivos, negativos ou neutros.
+A pandemia de COVID-19 trouxe consigo uma série de mudanças na vida das pessoas, desde a forma de trabalhar até a forma de se comunicar. Com o isolamento social, as redes sociais se tornaram um dos principais meios de comunicação entre as pessoas, e com isso, a quantidade de informações e opiniões compartilhadas aumentou consideravelmente.
+
+A análise de sentimentos em textos é uma assunto dentro da área Processamento de Linguagem Natural (NLP) que tem como objetivo identificar e extrair informações sobre as emoções e opiniões expressas em textos. Neste projeto, realizamos a análise dos tweets e a classificação dos sentimentos expressos neles, utilizando técnicas de NLP e aprendizado de máquina.
 
 ## 📦 Conteúdo
 
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Conteúdo](#-conteúdo)
+- [Dados](#-dados)
+- [Objetivos](#-objetivos)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Como Executar o Projeto](#-como-executar-o-projeto)
 - [Licença](#-licença)
+
+## 📊 Dados
+
+Para esse estudo, usamos os dados coletados do Twitter, disponível no [Kaggle](https://www.kaggle.com/datatattle/covid-19-nlp-text-classification). Esse conjunto, composto por 41.557 *tweets*, foi coletado entre os dias 16 de março e 14 de abril de 2020. As 6 colunas presentes nele são:
+
+1. `OriginalTweet`: O texto original do *tweet*, contendo a mensagem relacionada à pandemia de COVID-19. Esse campo é o principal objeto de análise do projeto.
+2. `Sentiment`: O sentimento predominante no *tweet*, categorizado em 5 classes:
+   - **Extremamente Negativo**
+    - **Negativo**
+    - **Neutro**
+    - **Positivo**
+    - **Extremamente Positivo**
+
+3. `TweetAt`: A data em que o *tweet* foi publicado, permitindo a análise temporal dos dados.
+4. `Location`: A localização cadastrada pelo usuário que publicou o *tweet*.
+5. `ScreenName`: O nome de usuário do *Twitter* codificado, protegendo a identidade dos autores dos tweets.
+6. `UserName`: A arroba (@) do usuário do *Twitter* codificada, complementando a informação do `ScreenName`.
+
+### Exemplo de mensagens por sentimento:
+
+a) **Extremamente Negativo**:
+```
+Matters have gotten desperate in Not a single shop grocery provision store has been allowed to open for 3 days inspite of assurances by If we step out looking for bread we are beaten by cops Starvation will kill is before
+```
+
+b) **Negativo**:
+```
+Just because the sun is shining doesn't mean it's going to save you, your neighbours nor your family and friends from covid-19. I have to work at a supermarket so people can still get food. Just stay the fuck inside or have you not heard that nearly 5000 Britons have died?
+```
+
+c) **Neutro**:
+```
+Here we go. Today the #Coronavirus has arrived in the next county over, and my regular grocery store is starting to get cleaned out.
+```
+
+d) **Positivo**
+```
+Stay home this is a #pandemic #churches need to do the services online do your grocery shopping online  and tip well I will be doing the same if you do go out wear a mask #stayhome #coronavirus #covid19 #CoronavirusPandemic
+```
+
+e) **Extremamente Positivo**
+```
+The Berkshire Dream Center in is working to help families in need stock up and stay prepared with basic necessities amid the outbreak Food diaper distribution is taking place today on Tyler Street Details here
+```
+
+## 🎯 Objetivos
+### Objetivo Geral
+Explorar e analisar os dados do conjunto de tweets coletados sobre a COVID-19, buscando identificar padrões e *insights* relevantes sobre a percepção da população durante a pandemia.
+
+### Objetivos Específicos:
+1. **Análise Exploratória de Dados:**
+    - Descrever as características estatísticas do conjunto de dados, como distribuição de frequências dos sentimentos, localização dos usuários e datas dos tweets.
+    - Visualizar os dados por meio de gráficos e tabelas para compreender distribuição dos sentimentos.
+2. **Pré-processamento de Texto:**
+    - Aplicar técnicas de pré-processamento como remoção de stopwords, lematização e normalização para minúsculas para a análise.
+    - Avaliar o impacto do pré-processamento na performance dos modelos de classificação de sentimentos.
+3. **Extração de Características:**
+    - Testar diferentes técnicas de vetorização, como *Bag of Words* (BOW), TF-IDF, *Word Embeddings* e *Sentence Embeddings*, para identificar a melhor representação do texto para a tarefa de classificação de sentimentos.
+    - Comparar o desempenho dos modelos de classificação com as diferentes técnicas de vetorização, usando métricas de avaliação como acurácia, precisão, recall e F1-score.
+4. **Classificação de Sentimentos:**
+   - Treinar e avaliar diferentes modelos de classificação de sentimentos, como Máquina de Vetores de Suporte (SVM), Regressão Logística, Floresta Aleatória e Redes Neurais, para identificar o modelo com melhor desempenho.
+5. **Análise de Resultados:**
+   - Interpretar os resultados da classificação de sentimentos e identificar os principais tópicos e sentimentos presentes nos tweets.
+
+
 
 ## 🛠️ Tecnologias Utilizadas
 
