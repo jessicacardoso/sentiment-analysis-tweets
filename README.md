@@ -1,67 +1,87 @@
-# Análise de Tweets de Covid
-
-![](tweets_api.png)
-
-Nesse repositório, exploramos um conjunto de *tweets*  coletados durante a pandemia da Covid-19, realizamos análises que  visavam identificar quais termos foram mais comentados no período da  coleta desses dados. Além disso, realizamos a tarefa de predição do sentimento  contido nos *tweets* propostos. Uma API de predição também se encontra nesse repositório.
-
-O *dataset* utilizado nesse repositório pode ser baixado no [kaggle](https://www.kaggle.com/datatattle/covid-19-nlp-text-classification).
-
-## :zap: **Tecnologias**
-
-<h1 align="center">
-  <img src="https://storage.ning.com/topology/rest/1.0/file/get/1157930838?profile=original" alt="Stack" width="600">
-  <br>
+<div align="center">
+<h1 style="color:#1597e8">
+    Análise de Sentimentos em Tweets 🐦<br/>
+    <span style="font-size:18px; color:gray">Coletados durante a pandemia da COVID-19 🦠</span>
 </h1>
+</div>
+<div align="center">
+<!-- python -->
+<img src="https://img.shields.io/badge/3.10-%233776AB?style=flat-square&logo=python&logoColor=white&label=Python" alt="Python 3.10">
+<!-- pré-commit -->
+<img src="https://img.shields.io/badge/pre--commit-%23000000?style=flat-square&logo=pre-commit&logoColor=white" alt="pre-commit">
+<br/>
+<!-- pandas -->
+<img src="https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas">
+<!-- matplotlib -->
+<img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black" alt="Matplotlib">
+<!-- sklearn -->
+<img src="https://img.shields.io/badge/-Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn">
+<!-- spacy -->
+<img src="https://img.shields.io/badge/-Spacy-09A8E3?style=flat-square&logo=spacy&logoColor=white" alt="Spacy">
+<!-- poetry -->
+<img src="https://img.shields.io/badge/-Poetry-4B32C3?style=flat-square&logo=Poetry&logoColor=white" alt="Poetry">
 
 
+<p>Projeto de análise de sentimentos em tweets utilizando técnicas de NLP e Machine Learning.</p>
+<figure align="center">
+<img src="https://img.freepik.com/free-vector/messenger-concept-illustration_114360-860.jpg?w=900&t=st=1709998370~exp=1709998970~hmac=5bf95343bea4785fe16891486268abb6c4047235ac6498f61f0ea412301abdc7" height=300>
+<br/>
+<figcaption>Imagem de <a href="https://www.freepik.com/free-vector/messenger-concept-illustration_6199003.htm#fromView=search&page=1&position=20&uuid=5d4efd58-f6fd-4d35-8037-4edfc7d04b91">storyset</a> no <a href="https://www.freepik.com/">Freepik</a></figcaption>
+<figure>
+</div>
 
-- Pandas
-- Numpy
-- Seaborn
-- Matplotlib
-- Tensorflow
-- Scikit-learn
+## 📚 Sobre o Projeto
 
-dentre outras ...
+Este projeto tem como objetivo realizar a análise de sentimentos em tweets coletados durante a pandemia de COVID-19. Para isso, utilizamos técnicas de Processamento de Linguagem Natural (NLP) e Machine Learning para classificar os tweets em positivos, negativos ou neutros.
+
+## 📦 Conteúdo
+
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Conteúdo](#-conteúdo)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Como Executar o Projeto](#-como-executar-o-projeto)
+- [Licença](#-licença)
+
+## 🛠️ Tecnologias Utilizadas
+
+- [Python](https://www.python.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [Scikit-Learn](https://scikit-learn.org/stable/)
+- [Spacy](https://spacy.io/)
+- E outras bibliotecas de Python
 
 
-## :hammer_and_wrench:Como executar o projeto
+## 🚀 Como Executar o Projeto
 
-Essa aplicação foi desenvolvida no sistema operacional Ubuntu 20.04.3 LTS com a versão do python 3.7 do Miniconda.
+### Pré-requisitos
 
-Primeiro realize a preparação do ambiente:
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+- [Git](https://git-scm.com/)
+- [Python](https://www.python.org/)
+- [Pip](https://pypi.org/project/pip/)
+
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🧭 Rodando o Jupyter Notebook
 
 ```bash
-# 1. Crie um ambiente virtual
-conda create -n my_env python=3.7
-
-# 2. Ative o ambiente de desenvolvimento
-conda activate my_env
-
-# 3. Instale as dependências do projeto
-pip install -r requirements.txt
+# Clone este repositório
+$ git clone https://github.com/jessicacardoso/sentiment-analysis-tweets.git
 ```
-
-
-
-### API
-
 ```bash
-# Execute a aplicação em modo de desenvolvimento
-uvicorn main:app --reload
-
-# O servidor iniciará na porta:8000 - disponível http://localhost:8000
+# Acesse a pasta do projeto no terminal/cmd
+$ cd sentiment-analysis-tweets
 ```
-
-Para ter acesso a documentaçao gerada pelo Swagger, acesse o caminho http://localhost:8000/docs
-
-
-
-#### Jupyter Notebook
-
 ```bash
-# Inicie o jupyter
-jupyter notebook
-
-# O servidor iniciará na porta:8888 - disponível em http://localhost:8888/tree
+# Instale as dependências
+$ pip install -r requirements.txt
 ```
+```bash
+# Execute o Jupyter Notebook
+$ jupyter notebook
+```
+
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
