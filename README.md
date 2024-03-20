@@ -61,7 +61,7 @@ Explorar e analisar os dados do conjunto de *tweets* coletados sobre a COVID-19,
     - Testar diferentes técnicas de vetorização, como *Bag of Words* (BOW), TF-IDF, *Word Embeddings* e *Sentence Embeddings*, para identificar a melhor representação do texto para a tarefa.
     - Comparar o desempenho dos modelos de classificação com as diferentes técnicas de vetorização, usando métricas de avaliação como acurácia, precisão, cobertura e *F1-score*.
 4. **Classificação de Sentimentos:**
-   - Treinar e avaliar diferentes modelos de classificação de sentimentos, como Máquina de Vetores de Suporte (SVM), Regressão Logística e Floresta Aleatória, para identificar o modelo com melhor desempenho. Usamos também o modelo [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) para classificação de sentimentos.
+   - Treinar e avaliar diferentes modelos de classificação de sentimentos, como Máquina de Vetores de Suporte (SVM), Regressão Logística e Floresta Aleatória, para identificar o modelo com melhor desempenho. Usamos o modelo [Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1), e fizemos *fine-tuning* no [BERT](https://huggingface.co/google-bert/bert-base-uncased) para classificação de sentimentos para comparar com os modelos tradicionais.
 5. **Análise de Resultados:**
    - Interpretar os resultados da classificação de sentimentos e identificar os principais tópicos e sentimentos presentes nos *tweets*.
 
@@ -99,7 +99,7 @@ Quanto à distribuição dos sentimentos, a Figura 2 mostra que a maioria dos *t
 <small>Figura 2: Distribuição de tweets por sentimento</small>
 </div>
 
-Ainda no tema de *tweets* por dia da semana, a Figura 3 mostra a variação de quantidade de *tweets* por sentimento. Vemos que o sentimento **Positivo** é o mais frequente em todos os dias da semana, seguido por **Negativo** .  
+Ainda no tema de *tweets* por dia da semana, a Figura 3 mostra a variação de quantidade de *tweets* por sentimento. Vemos que o sentimento **Positivo** é o mais frequente em todos os dias da semana, seguido por **Negativo** .
 
 <div align="center">
 <img src="imgs/sentimento_dia_semana.png" alt="Gráfico de barras com a distribuição de sentimentos por dia da semana" height=300>
@@ -181,6 +181,15 @@ $ pip install -r requirements.txt
 # Execute o Jupyter Notebook
 $ jupyter notebook
 ```
+
+## 📊 Resultados
+
+Os resultados da análise exploratória de dados e da modelagem de classificação de sentimentos foram dividos em 4 notebooks, que podem ser acessados nos links abaixo:
+
+1. [Análise exploratória de dados](./notebooks/1.analise-exploratoria-dados.ipynb)
+2. [Análise usando embeddings](./notebooks/2.embeddings_tweets.ipynb)
+3. [Modelagem e previsão com BoW, TF-IDF e Embeddings](./notebooks/3.1.modelagem_part1.ipynb)
+4. [Previsão via Zero-shot prompt usando Mixtral-8x7B comparado com Fine-Tuning no BERT](./notebooks/3.2modelagem_part2.ipynb)
 
 ## 📝 Licença
 
